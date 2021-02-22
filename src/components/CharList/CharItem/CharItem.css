@@ -1,0 +1,42 @@
+.char-wrapper {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 100%;
+  border-bottom: solid 1px #ccc;
+}
+
+.char-image {
+  width: 100%;
+  height: 100%;
+  grid-row: 1;
+  grid-column: 1;
+  overflow: hidden;
+}
+
+.char-image img {
+  width: 100%;
+}
+
+.char-basic-info {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.char-name {
+  grid-row: 1;
+  grid-column: 1;
+  font-weight: bold;
+}
+
+.char-actor {
+  grid-row: 2;
+  grid-column: 1;
+  font-size: 0.9rem;
+}

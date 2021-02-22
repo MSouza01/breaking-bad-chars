@@ -25,8 +25,7 @@ const app = (props) => {
     }
   }, [props.fetched, props.characters, props.episodes]);
 
-  const list = (props) => <CharList />;
-  const details = (props) => <CharDetails />;
+  const { characters, episodes, appearances } = props;
 
   let content = (
     <div className='loader-wrapper'>
@@ -34,15 +33,25 @@ const app = (props) => {
     </div>
   );
 
-  // let routes = (
-  //   <Switch>
-  //     <Route path='/' exact component={list} />
-  //     <Route path='/:idx' component={details} />
-  //     <Redirect to='/' />
-  //   </Switch>
-  // );
+  if (props.ready) {
+    const list = (props) => <CharList characters={characters} />;
+    const details = (props) => <CharDetails characters={characters} appearances={appearances} episodes={episodes} />;
 
-  return content;
+    content = (
+      <Switch>
+        <Route path='/' exact component={list} />
+        <Route path='/:idx' component={details} />
+        <Redirect to='/' />
+      </Switch>
+    );
+  }
+
+  return (
+    <div className='app'>
+      <div className='header' />
+      {content}
+    </div>
+  );
 };
 
 /**
