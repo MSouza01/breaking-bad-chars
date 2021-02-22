@@ -12,11 +12,12 @@ import reportWebVitals from './reportWebVitals';
 import charReducer from './store/reducers/characters';
 import episodeReducer from './store/reducers/episodes';
 
+// Enabling Google Chrome's Redux Devtools Extension on development enviroment
 const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
 
 const rootReducer = combineReducers({
-  char: charReducer,
-  ep: episodeReducer,
+  characters: charReducer,
+  episodes: episodeReducer,
 });
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));

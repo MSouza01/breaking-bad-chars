@@ -21,6 +21,9 @@ const fetchEpisodesFail = (error) => {
   };
 };
 
+/**
+ * Fetches Breaking Bad episodes from https://www.breakingbadapi.com/api/
+ */
 export const fetchEpisodes = () => {
   return (dispatch) => {
     dispatch(fetchEpisodesStart);

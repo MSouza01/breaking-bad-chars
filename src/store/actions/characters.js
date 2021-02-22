@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios/axios';
-import { characterAppearences } from '../../shared/utility';
+import { characterAppearances } from '../../shared/utility';
 
 const fetchCharactersStart = () => {
   return {
@@ -22,13 +22,16 @@ const fetchCharactersFail = (error) => {
   };
 };
 
-const createAppearencesArrayAction = (appearences) => {
+const appearancesArrayDispatch = (appearances) => {
   return {
     type: actionTypes.CREATE_APPEARENCES_ARRAY,
-    appearences: appearences,
+    appearances: appearances,
   };
 };
 
+/**
+ * Fetches Breaking Bad characters from https://www.breakingbadapi.com/api/
+ */
 export const fetchCharacters = () => {
   return (dispatch) => {
     dispatch(fetchCharactersStart);
@@ -43,14 +46,20 @@ export const fetchCharacters = () => {
   };
 };
 
-export const createAppearencesArray = (characters, episodes) => {
+/**
+ * Creates an array of arrays of appearances. Each row corresponds to a character with the same index in the characters array.
+ *
+ * @param {Array} characters List of characters fetched from The Breaking Bad API
+ * @param {Array} episodes List of episodes fetched from The Breking Bad API
+ */
+export const createAppearancesArray = (characters, episodes) => {
   return (dispatch) => {
-    const appearences = [];
+    const appearances = [];
 
     characters.forEach((char) => {
-      appearences.push([...characterAppearences(char, episodes)]);
+      appearances.push([...characterAppearances(char, episodes)]);
     });
 
-    dispatch(createAppearencesArrayAction(appearences));
+    dispatch(appearancesArrayDispatch(appearances));
   };
 };
