@@ -1,6 +1,11 @@
 // import logo from './logo.svg';
 import React, { useEffect } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+// import { isMobile } from 'react-device-detect';
 import { connect } from 'react-redux';
+
+import CharList from './components/CharList/CharList';
+import CharDetails from './components/CharDetails/CharDetails';
 import * as actions from './store/actions';
 import './App.css';
 
@@ -16,19 +21,18 @@ const app = (props) => {
     }
   }, [props.fetched, props.characters, props.episodes]);
 
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
-    </div>
+  const list = (props) => <CharList />;
+  const details = (props) => <CharDetails />;
+
+  let routes = (
+    <Switch>
+      <Route path='/' exact component={list} />
+      <Route path='/:idx' component={details} />
+      <Redirect to='/' />
+    </Switch>
   );
+
+  return routes;
 };
 
 const mapStateToProps = (state) => {
