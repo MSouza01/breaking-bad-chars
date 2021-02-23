@@ -1,0 +1,25 @@
+.char-appearances-wrapper {
+  width: 95%;
+  margin: 10px auto;
+}
+
+@media (min-width: 450px) {
+  .char-appearances-wrapper {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .char-appearances-wrapper {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .char-appearances-wrapper {
+    width: 60%;
+    margin: 10px auto;
+  }
+}

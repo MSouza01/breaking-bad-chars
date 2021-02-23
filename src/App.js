@@ -1,14 +1,15 @@
 // import logo from './logo.svg';
 import React, { useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Loader from 'react-loader-spinner';
 // import { isMobile } from 'react-device-detect';
 import { connect } from 'react-redux';
+import * as actions from './store/actions';
+
+import './App.css';
 
 import CharList from './components/CharList/CharList';
 import CharDetails from './components/CharDetails/CharDetails';
-import * as actions from './store/actions';
-import './App.css';
+import Spinner from './components/Spinner/Spinner';
 
 const app = (props) => {
   // Runs right when the app starts and fetches characters and episodes
@@ -27,11 +28,7 @@ const app = (props) => {
 
   const { characters, episodes, appearances } = props;
 
-  let content = (
-    <div className='loader-wrapper'>
-      <Loader type='TailSpin' height='30%' width='30%' color='#00BFFF' />
-    </div>
-  );
+  let content = <Spinner />;
 
   if (props.ready) {
     const list = (props) => <CharList characters={characters} />;

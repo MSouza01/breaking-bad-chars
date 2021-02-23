@@ -37,3 +37,11 @@ export const characterAppearances = (character, episodes) => {
 
   return indexes;
 };
+
+export const fixDateString = (date) => {
+  return date.split('-').join('/');
+};
+
+export const formatEpisodeString = (season, episode) => {
+  return 'S' + season.trim().padStart(2, '0') + 'E' + episode.trim().padStart(2, '0');
+};
