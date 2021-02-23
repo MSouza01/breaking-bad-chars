@@ -16,8 +16,12 @@ const charItem = (props) => {
         <img src={props.character.img} alt={props.character.name + ' image'} />
       </div>
       <div className='char-basic-info'>
-        <span className='char-name'>{props.character.name}</span>
-        <span className='char-actor'>{props.character.portrayed}</span>
+        <div className='char-name'>
+          <p>{props.character.name}</p>
+        </div>
+        <div className='char-actor'>
+          <p>{props.character.portrayed}</p>
+        </div>
       </div>
     </div>
   );
