@@ -1,11 +1,11 @@
 # Breaking Bad Characters
 
-Esta aplicação busca os personagens e episódios da série Breaking Bad da Breaking Bad API (https://www.breakingbadapi.com/).\
+Esta aplicação busca os personagens e episódios da série Breaking Bad da Breaking Bad API (https://www.breakingbadapi.com/ ).\
 Ela mostra uma lista de personagens com suas informações básicas. Quando um personagem é clicado, são mostradas todas as suas informações e uma lista de aparições.\
 A lista de aparições é criada baseada nas informações dos episódios buscada na API e nem todos os personagens que aparecem nos episódios são listados.\
 Por essa razão, alguns personagens não possuem uma lista de aparições.\
 \
-This application fetches the Breaking Bad's characters and episodes from The Breaking Bad API (https://www.breakingbadapi.com/).\
+This application fetches the Breaking Bad's characters and episodes from The Breaking Bad API (https://www.breakingbadapi.com/ ).\
 It shows a characters list with their basic information. When a character is clicked, it is shown all the information and a list of appearances.\
 The list of appearances is created based on the fetched episodes information and not every character that appears in the episodes is listed.\
 Because of that, some characters has no appearances list on their details page.
