@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 
 import './CharItem.css';
 
+/**
+ * Characters List's item component for rendering the basic information of a character
+ *
+ * @param {*} props
+ */
 const charItem = (props) => {
   const onClick = (event) => {
     event.preventDefault();
@@ -28,8 +33,8 @@ const charItem = (props) => {
 };
 
 charItem.propTypes = {
-  character: PropTypes.object,
-  index: PropTypes.number,
+  character: PropTypes.object.isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default withRouter(charItem);

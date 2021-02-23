@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 import './CharInfoItem.css';
 
+/**
+ * Renders the label on the left and all the values on the right. The values prop must be an array, even if it's only one value.
+ *
+ * @param {*} props
+ */
 const charInfoItem = (props) => {
   let dynamicStyle = { height: `${30 * props.values.length}px`, borderBottom: '1px solid #ccc' };
 
@@ -29,8 +34,8 @@ const charInfoItem = (props) => {
 };
 
 charInfoItem.propTypes = {
-  label: PropTypes.string,
-  values: PropTypes.arrayOf(PropTypes.string),
+  label: PropTypes.string.isRequired,
+  values: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default charInfoItem;

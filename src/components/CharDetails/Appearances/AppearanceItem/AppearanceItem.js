@@ -6,6 +6,11 @@ import './AppearanceItem.css';
 
 import { formatEpisodeString } from '../../../../shared/utility';
 
+/**
+ * Renders an item of the appearances list with all the episode's information
+ *
+ * @param {*} props
+ */
 const appearanceItem = (props) => {
   return (
     <div className='ep-wrapper'>
@@ -21,7 +26,7 @@ const appearanceItem = (props) => {
 };
 
 appearanceItem.propTypes = {
-  episode: PropTypes.object,
+  episode: PropTypes.object.isRequired,
 };
 
 export default appearanceItem;

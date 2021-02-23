@@ -3,6 +3,11 @@ import Loader from 'react-loader-spinner';
 
 import './Spinner.css';
 
+/**
+ * Spinner animation for loading feedback to the user
+ *
+ * @param {*} props
+ */
 const spinner = (props) => {
   return (
     <div className='loader-wrapper'>

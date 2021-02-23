@@ -6,6 +6,11 @@ import './Desktop.css';
 import CharList from '../../components/CharList/CharList';
 import CharDetails from '../../components/CharDetails/CharDetails';
 
+/**
+ * A component for rendering the desktop version of the application with the Characters List on the left and the Character Details on the right
+ *
+ * @param {*} props
+ */
 const desktop = (props) => {
   return (
     <div className='desktop-grid'>
@@ -20,9 +25,9 @@ const desktop = (props) => {
 };
 
 desktop.propTypes = {
-  character: PropTypes.object,
-  episodes: PropTypes.arrayOf(PropTypes.object),
-  appearances: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  episodes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  appearances: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
 };
 
 export default desktop;

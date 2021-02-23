@@ -6,6 +6,11 @@ import './CharInfo.css';
 
 import CharInfoItem from './CharInfoItem/CharInfoItem';
 
+/**
+ * Renders all information about the selected character. This component was created so the CharDetails's code would be cleaner.
+ *
+ * @param {*} props
+ */
 const charInfo = (props) => {
   return (
     <div className='char-info-wrapper'>
@@ -20,7 +25,7 @@ const charInfo = (props) => {
 };
 
 charInfo.propTypes = {
-  character: PropTypes.object,
+  character: PropTypes.object.isRequired,
 };
 
 export default charInfo;

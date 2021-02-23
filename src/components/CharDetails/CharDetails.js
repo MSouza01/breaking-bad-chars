@@ -9,10 +9,18 @@ import Spinner from '../UI/Spinner/Spinner';
 import CharInfo from './CharInfo/CharInfo';
 import Appearances from './Appearances/Appearances';
 
+/**
+ * Renders the details and appearances of the selected character
+ *
+ * @param {*} props
+ */
 const charDetails = (props) => {
   const [character, setCharacter] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  /**
+   * Updates the character state every time the URL params change
+   */
   useEffect(() => {
     setLoading(true);
     if (props.match.params.idx) {
@@ -56,9 +64,9 @@ const charDetails = (props) => {
 };
 
 charDetails.propTypes = {
-  character: PropTypes.object,
-  episodes: PropTypes.arrayOf(PropTypes.object),
-  appearances: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  episodes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  appearances: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
   isMobile: PropTypes.bool,
 };
 

@@ -38,10 +38,25 @@ export const characterAppearances = (character, episodes) => {
   return indexes;
 };
 
+/**
+ * Replaces the '-' for '/' in the date strings
+ *
+ * @param {string} date
+ *
+ * @returns Fixed date string
+ */
 export const fixDateString = (date) => {
   return date.split('-').join('/');
 };
 
+/**
+ * Formats the episode number string as "S0XE0Y" being X the season number and Y the episode number
+ *
+ * @param {string} season
+ * @param {string} episode
+ *
+ * @returns Formated episode number string
+ */
 export const formatEpisodeString = (season, episode) => {
   return 'S' + season.trim().padStart(2, '0') + 'E' + episode.trim().padStart(2, '0');
 };

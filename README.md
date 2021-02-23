@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Breaking Bad Characters
+
+Esta aplicação busca os personagens e episódios da série Breaking Bad da Breaking Bad API (https://www.breakingbadapi.com/).\
+Ela mostra uma lista de personagens com suas informações básicas. Quando um personagem é clicado, são mostradas todas as suas informações e uma lista de aparições.\
+A lista de aparições é criada baseada nas informações dos episódios buscada na API e nem todos os personagens que aparecem nos episódios são listados.\
+Por essa razão, alguns personagens não possuem uma lista de aparições.\
+\
+This application fetches the Breaking Bad's characters and episodes from The Breaking Bad API (https://www.breakingbadapi.com/).\
+It shows a characters list with their basic information. When a character is clicked, it is shown all the information and a list of appearances.\
+The list of appearances is created based on the fetched episodes information and not every character that appears in the episodes is listed.\
+Because of that, some characters has no appearances list on their details page.
+
+## Personal Notes
+
+Os dados buscados na API não são volumosos e não aumentarão, então não foi necessária uma paginação durante a busca.\
+Com isso em mente, as tarefas de busca e criação do Array de aparições foram facilitadas.\
+\
+The fetched data is not bulky and it will not scale, so it was not necessary a pagination when fetching.\
+With that in mind, the data fetching and the appearances array's creation was simpler.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
