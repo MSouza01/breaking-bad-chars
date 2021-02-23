@@ -6,12 +6,12 @@ import * as actions from './store/actions';
 
 import './App.css';
 
-import Logo from './components/Logo/Logo';
+import Logo from './components/UI/Logo/Logo';
 
 import Desktop from './containers/Desktop/Desktop';
 import CharList from './components/CharList/CharList';
 import CharDetails from './components/CharDetails/CharDetails';
-import Spinner from './components/Spinner/Spinner';
+import Spinner from './components/UI/Spinner/Spinner';
 
 const app = (props) => {
   // Runs right when the app starts and fetches characters and episodes

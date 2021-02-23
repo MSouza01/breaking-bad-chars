@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import './CharDetails.css';
 
-import BackButton from '../BackButton/BackButton';
-import Spinner from '../Spinner/Spinner';
+import BackButton from '../UI/BackButton/BackButton';
+import Spinner from '../UI/Spinner/Spinner';
 import CharInfo from './CharInfo/CharInfo';
 import Appearances from './Appearances/Appearances';
 

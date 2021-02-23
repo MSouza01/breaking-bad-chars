@@ -13,7 +13,9 @@ const charInfoItem = (props) => {
   return (
     <div className='char-info-item-wrapper' style={dynamicStyle}>
       <div className='grid'>
-        <p className='label'>{props.label}</p>
+        <div className='label' style={{ lineHeight: `${30 * props.values.length}px` }}>
+          <p>{props.label}</p>
+        </div>
         <div className='values'>
           {props.values.map((value) => (
             <p key={value} className='value'>

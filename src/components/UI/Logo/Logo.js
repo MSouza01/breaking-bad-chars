@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from '../../assets/breaking-bad-logo.png';
+import Logo from '../../../assets/breaking-bad-logo.png';
 
 import './Logo.css';
 
