@@ -6,6 +6,8 @@ import * as actions from './store/actions';
 
 import './App.css';
 
+import Logo from './components/Logo/Logo';
+
 import Desktop from './containers/Desktop/Desktop';
 import CharList from './components/CharList/CharList';
 import CharDetails from './components/CharDetails/CharDetails';
@@ -55,7 +57,9 @@ const app = (props) => {
 
   return (
     <div className='app'>
-      <div className='header' />
+      <div className='header'>
+        <Logo />
+      </div>
       {content}
     </div>
   );

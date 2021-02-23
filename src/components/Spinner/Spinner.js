@@ -6,7 +6,7 @@ import './Spinner.css';
 const spinner = (props) => {
   return (
     <div className='loader-wrapper'>
-      <Loader type='TailSpin' height='30%' width='30%' color='#00BFFF' />
+      <Loader type='TailSpin' height='30%' width='30%' color='#2a9c76' />
     </div>
   );
 };

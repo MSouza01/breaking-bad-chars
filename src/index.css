@@ -1,6 +1,7 @@
 :root {
   --header-height: 50px;
   --content-height: calc(100vh - 50px);
+  --primary-color: #2a9c76;
 }
 
 body {
