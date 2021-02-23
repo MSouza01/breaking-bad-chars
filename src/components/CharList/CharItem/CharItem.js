@@ -7,7 +7,7 @@ import './CharItem.css';
 const charItem = (props) => {
   const onClick = (event) => {
     event.preventDefault();
-    props.history.push('/' + props.index);
+    props.history.replace('/' + props.index);
   };
 
   return (

@@ -5,19 +5,31 @@ h1 {
 
 .char-details-page {
   width: 100%;
-  height: calc(100% - var(--header-height));
-  padding-top: 15px;
-  box-sizing: border-box;
+  height: var(--content-height);
   text-align: center;
 }
 
 .char-image-wrapper {
   width: 100%;
   height: 300px;
+  padding-top: 15px;
+  box-sizing: border-box;
   text-align: center;
 }
 
 .char-image-wrapper img {
   height: 100%;
   margin: auto;
+}
+
+.no-char {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-char p {
+  margin: 0;
 }

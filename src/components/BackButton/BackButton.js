@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const backButton = (props) => {
   const onClick = (event) => {
     event.preventDefault();
-    props.history.goBack();
+    props.history.replace('/');
   };
 
   return (

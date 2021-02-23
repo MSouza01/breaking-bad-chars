@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
 import React, { useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-// import { isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 import { connect } from 'react-redux';
 import * as actions from './store/actions';
 
 import './App.css';
 
+import Desktop from './containers/Desktop/Desktop';
 import CharList from './components/CharList/CharList';
 import CharDetails from './components/CharDetails/CharDetails';
 import Spinner from './components/Spinner/Spinner';
@@ -31,16 +31,26 @@ const app = (props) => {
   let content = <Spinner />;
 
   if (props.ready) {
-    const list = (props) => <CharList characters={characters} />;
-    const details = (props) => <CharDetails characters={characters} appearances={appearances} episodes={episodes} />;
-
-    content = (
-      <Switch>
-        <Route path='/' exact component={list} />
-        <Route path='/:idx' component={details} />
-        <Redirect to='/' />
-      </Switch>
-    );
+    if (isMobile) {
+      const list = (props) => <CharList characters={characters} />;
+      const details = (props) => <CharDetails characters={characters} appearances={appearances} episodes={episodes} isMobile />;
+      content = (
+        <Switch>
+          <Route path='/' exact component={list} />
+          <Route path='/:idx' component={details} />
+          <Redirect to='/' />
+        </Switch>
+      );
+    } else {
+      const desktop = (props) => <Desktop characters={characters} appearances={appearances} episodes={episodes} />;
+      content = (
+        <Switch>
+          <Route path='/' exact component={desktop} />
+          <Route path='/:idx' component={desktop} />
+          <Redirect to='/' />
+        </Switch>
+      );
+    }
   }
 
   return (

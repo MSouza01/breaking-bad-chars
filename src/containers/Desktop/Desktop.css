@@ -1,0 +1,21 @@
+.desktop-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: var(--content-height);
+}
+
+.desktop-list {
+  grid-row: 1;
+  grid-column: 1;
+  overflow-y: scroll;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.desktop-details {
+  grid-row: 1;
+  grid-column: 2;
+  overflow-y: scroll;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
